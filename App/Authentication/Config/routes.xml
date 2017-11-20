@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<routes>
+
+    <!--    LOGIN   -->
+    <route url="/auth/login.html" module="Connexion" action="login" />
+
+    <route url="/auth/logout.html" module="Connexion" action="logout" />
+
+    <route url="/auth/register.html" module="Connexion" action="register" />
+
+</routes>

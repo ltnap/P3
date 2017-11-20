@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<routes>
+
+    <!--    NEWS  -->
+    <route url="/api/get-news-([0-9]+)" module="News" action="show" vars="id"/>
+
+    <!--    COMMENTS    -->
+    <route url="/api/comment-([0-9]+)" module="Comments" action="insertComment" vars="news" />
+    <route url="/api/comment-report-([0-9]+)" module="Comments" action="reportComment" vars="id" />
+
+</routes>
