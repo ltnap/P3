@@ -52,3 +52,54 @@
 
 </div>
 
+<div>
+    <?php
+    echo 'pagination';
+
+    $pagination = '';
+
+    if($nbrPages != 1)
+    {
+        if($pageNum > 1)
+        {
+            $previous = $pageNum - 1;
+            $pagination .= '<a href="/page- '. $previous .' ">Précédent</a> &nbsp; &nbsp;';
+
+            for($i = $pageNum - $nbrMaxBefAft; $i < $pageNum; $i++){
+                if($i > 0){
+                    $pagination .= '<a href="/page-' . $i . '">' . $i . '</a> &nbsp;';
+                }
+            }
+        }
+
+        $pagination .= '<span class="active">' . $pageNum . '</span>&nbsp;';
+
+        for ($i = $pageNum+1; $i <= $nbrPages; $i++){
+            $pagination .= '<a href="/page-' . $i . '">' . $i . '</a>';
+
+            if ($i >= $pageNum + $nbrMaxBefAft)
+            {
+                break;
+            }
+        }
+
+        if($pageNum != $nbrPages)
+        {
+            $next = $pageNum + 1;
+            $pagination .= ' <a href="/page-' . $next . '">Suivant</a> ';
+        }
+    }
+    echo'PAGE NUM : ';
+    var_dump($pageNum);
+
+    echo'NBR PAGES : ';
+    var_dump($nbrPages);
+
+    echo'NBR MAX AFTER BEF : ';
+    var_dump($nbrMaxBefAft);
+
+    echo '<div id="pagination"> ' . $pagination . ' </div>';
+
+        ?>
+</div>
+

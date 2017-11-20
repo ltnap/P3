@@ -2,4 +2,5 @@
 <routes>
 
     <route url="/" module="News" action="index"/>
+    <route url="/page-([0-9]+)" module="News" action="index" vars="page" />
 </routes>

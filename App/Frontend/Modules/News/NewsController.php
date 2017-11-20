@@ -16,9 +16,9 @@ class NewsController extends BackController
 {
     public function executeIndex(HTTPRequest $request)
     {
-        $nbrNews = $this->app->config()->get('nombre_news_par_page');
+        $nbrNews = intval($this->app->config()->get('nombre_news_par_page'));
         $nbrCaracteres = $this->app->config()->get('nombre_caracteres_max');
-        $nbrMaxBefAft = $this->app->config()->get('nbr_max_before_and_after');
+        $nbrMaxBefAft = intval($this->app->config()->get('nbr_max_before_and_after'));
 
 
         // On ajoute une définition pour le titre.
@@ -29,11 +29,11 @@ class NewsController extends BackController
 
 
         $nbrTotalNews = $manager->count();
-        $nbrPages = ceil($nbrTotalNews / $nbrNews);
+        $nbrPages = intval(ceil($nbrTotalNews / $nbrNews));
 
-        if ($request->getExists('page') && is_numeric($request->getData('page')))
+        if ($request->getExists('page'))
         {
-            $pageNum = $request->getData('page');
+            $pageNum = intval($request->getData('page'));
         } else {
             $pageNum = 1;
         }
@@ -46,7 +46,10 @@ class NewsController extends BackController
             $pageNum = $nbrPages;
         }
 
-        $listeNews = $manager->getList(0, $nbrNews);
+        $depart = intval(($pageNum - 1 ) * $nbrPages);
+
+
+        $listeNews = $manager->getList($depart, $nbrNews);
 
         foreach ($listeNews as $news)
         {
@@ -61,6 +64,9 @@ class NewsController extends BackController
 
         // On ajoute la variable $listeNews à la vue.
         $this->page->addVar('listeNews', $listeNews);
+        $this->page->addVar('nbrPages', $nbrPages);
+        $this->page->addVar('pageNum', $pageNum);
+        $this->page->addVar('nbrMaxBefAft', $nbrMaxBefAft);
     }
 
 }

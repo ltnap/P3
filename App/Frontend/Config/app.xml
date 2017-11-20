@@ -2,5 +2,5 @@
 <definitions>
     <define var="nombre_news_par_page" value="4" ></define>
     <define var="nombre_caracteres_max" value="300" ></define>
-    <define var="nbr_max_before_and_after" value="2" ></define>
+    <define var="nbr_max_before_and_after" value="4" ></define>
 </definitions>
