@@ -20,7 +20,7 @@ abstract class NewsManager extends Manager
      * @param $limite int Le nombre de news à sélectionner
      * @return array La liste des news. Chaque entrée est une instance de News.
      */
-    abstract public function getList($debut = -1, $limite = -1);
+    abstract public function getList($debut, $limite);
 
     /**
      * Méthode retournant une news précise.

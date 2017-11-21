@@ -17,9 +17,6 @@
 <!-- Bootstrap core CSS     -->
 <link href="/css/backend/bootstrap.min.css" rel="stylesheet" />
 
-<!-- Animation library for notifications   -->
-<!--<link href="/css/animate.min.css" rel="stylesheet"/>-->
-
 <!--  Light Bootstrap Table core CSS    -->
 <link href="/css/backend/light-bootstrap-dashboard.css" rel="stylesheet"/>
 

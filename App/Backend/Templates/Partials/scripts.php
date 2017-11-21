@@ -8,9 +8,6 @@
 <!--    Light Bootstrap Table Core javascript and methods for Demo purpose  -->
 <script src="/js/backend/light-bootstrap-dashboard.js"></script>
 
-<!--    Sweet Alert 2 CDN   -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.all.min.js"></script>
-
 <!--    TinyMCE    -->
 <script src="/js/tinymce/tinymce.min.js"></script>
 

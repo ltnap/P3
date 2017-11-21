@@ -13,14 +13,16 @@ use \Entity\News;
 
 class NewsManagerPDO extends NewsManager
 {
-    public function getList($debut = -1, $limite = -1)
+    public function getList($debut, $limite)
     {
         $sql = 'SELECT id, auteur, titre, content, AddDate, UpdtDate FROM news ORDER BY id DESC';
 
         if ($debut != -1 || $limite != -1)
         {
-            $sql .= ' LIMIT '.(int) $limite.' OFFSET '.(int) $debut;
+            $sql .= ' LIMIT '. $limite.' OFFSET '. $debut;
         }
+
+
 
         $requete = $this->dao->query($sql);
         $requete->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\News');

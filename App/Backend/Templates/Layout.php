@@ -30,12 +30,12 @@
                         <p>Commentaires</p>
                     </a>
                 </li>
-                <li>
+                <!--<li>
                     <a href="#">
                         <i class="pe-7s-user"></i>
                         <p>Mon compte</p>
                     </a>
-                </li>
+                </li>-->
                 <li>
                     <a href="/admin/users/">
                         <i class="pe-7s-users"></i>
