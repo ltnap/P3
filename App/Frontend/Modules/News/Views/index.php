@@ -89,14 +89,6 @@
             $pagination .= ' <a href="/page-' . $next . '#3rdPage/1">Suivant</a> ';
         }
     }
-    echo'PAGE NUM : ';
-    var_dump($pageNum);
-
-    echo'NBR PAGES : ';
-    var_dump($nbrPages);
-
-    echo'NBR MAX AFTER BEF : ';
-    var_dump($nbrMaxBefAft);
 
     echo '<div id="pagination"> ' . $pagination . ' </div>';
 

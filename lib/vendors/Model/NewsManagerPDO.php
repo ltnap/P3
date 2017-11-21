@@ -19,7 +19,7 @@ class NewsManagerPDO extends NewsManager
 
         if ($debut != -1 || $limite != -1)
         {
-            $sql .= ' LIMIT '. $limite.' OFFSET '. $debut;
+            $sql .= ' LIMIT '.(int) $limite.' OFFSET '.(int) $debut;
         }
 
 

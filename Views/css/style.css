@@ -2741,7 +2741,97 @@ input[type=text]::-ms-clear {
 /*MEDIA QUERIES
  * --------------------------------------- */
 /* Adjust form for screens */
-@media only screen and (min-width: 1024px) {
+@media (max-width: 767px) {
+
+    /* MENU */
+    .nav-links{
+        margin-top: 25px;
+        font-size:45px;
+    }
+    .social-account-links .social-link {
+        margin-left: 15px;
+        margin-right: 20px;
+    }
+    .social-link {
+        font-size: 30px;
+    }
+    .connexion-link {
+        font-size: 25px;
+        margin-top: 40px;
+    }
+
+    /*SECTION 0*/
+    h1 {
+        font-size: 4em;
+    }
+
+    /*SECTION 1*/
+    .profile h1{
+        font-size: 52px;
+        letter-spacing: normal;
+        padding-left: 10%;
+        bottom:80px;
+    }
+    .profile:hover h1{
+        display: none;
+    }
+    .profile h1:after{
+        left:10%;
+        bottom:-18vw;
+        width:10px;
+        height:20vw;
+    }
+    .profile .infoHolder{
+        top: 100px;
+        width: 85%;
+        right:6%;
+    }
+    .profile .imageHolder {
+        width:25%;
+        left:4%;
+        bottom:65px;
+    }
+    .profile:hover .profilePic{
+        display: none;
+    }
+
+
+    /*SECTION 2*/
+    .fp-controlArrow{
+        margin-top: -22px;
+    }
+    .fp-controlArrow .fp-prev{
+        border-width:18.5px 14px 18.5px 0 !important;
+    }
+    .fp-controlArrow .fp-next{
+        border-width:18.5px 0 18.5px 14px !important;
+    }
+    .content-card{
+        flex-direction: column;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .fp-section {
+        width: 750px;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .fp-section {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .fp-section {
+        width: 1170px;
+    }
+
+
+}
+
+/*@media only screen and (min-width: 1024px) {
 
 }
 
@@ -2755,6 +2845,6 @@ input[type=text]::-ms-clear {
 	.simform {
 		font-size: 1.2em;
 	}
-}
+}*/
 
 
