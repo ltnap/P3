@@ -22,6 +22,8 @@ class NewsManagerPDO extends NewsManager
             $sql .= ' LIMIT '. $limite.' OFFSET '. $debut;
         }
 
+
+
         $requete = $this->dao->query($sql);
         $requete->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\News');
 

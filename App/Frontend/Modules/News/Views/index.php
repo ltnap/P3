@@ -54,7 +54,7 @@
 
 <div>
     <?php
-    echo 'pagination';
+
 
     $pagination = '';
 
@@ -63,11 +63,11 @@
         if($pageNum > 1)
         {
             $previous = $pageNum - 1;
-            $pagination .= '<a href="/page- '. $previous .' ">Précédent</a> &nbsp; &nbsp;';
+            $pagination .= '<a href="/page- '. $previous .'#3rdPage/1 ">Précédent</a> &nbsp; &nbsp;';
 
             for($i = $pageNum - $nbrMaxBefAft; $i < $pageNum; $i++){
                 if($i > 0){
-                    $pagination .= '<a href="/page-' . $i . '">' . $i . '</a> &nbsp;';
+                    $pagination .= '<a href="/page-' . $i . '#3rdPage/1">' . $i . '</a> &nbsp;';
                 }
             }
         }
@@ -75,7 +75,7 @@
         $pagination .= '<span class="active">' . $pageNum . '</span>&nbsp;';
 
         for ($i = $pageNum+1; $i <= $nbrPages; $i++){
-            $pagination .= '<a href="/page-' . $i . '">' . $i . '</a>';
+            $pagination .= '<a href="/page-' . $i . '#3rdPage/1">' . $i . '</a>';
 
             if ($i >= $pageNum + $nbrMaxBefAft)
             {
@@ -86,7 +86,7 @@
         if($pageNum != $nbrPages)
         {
             $next = $pageNum + 1;
-            $pagination .= ' <a href="/page-' . $next . '">Suivant</a> ';
+            $pagination .= ' <a href="/page-' . $next . '#3rdPage/1">Suivant</a> ';
         }
     }
     echo'PAGE NUM : ';

@@ -46,7 +46,7 @@ class NewsController extends BackController
             $pageNum = $nbrPages;
         }
 
-        $depart = intval(($pageNum - 1 ) * $nbrPages);
+        $depart = intval(($pageNum - 1 ) * $nbrNews);
 
 
         $listeNews = $manager->getList($depart, $nbrNews);
