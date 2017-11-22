@@ -19,7 +19,7 @@
                                             <?= $form ?>
 
 
-                                    <button type="submit" value="Comment" id="<?= $comment['news'] ?>" class="combtn">COMMENTER</button>
+                                    <button type="submit" value="Comment" id="<?= $comment->news() ?>" class="combtn">COMMENTER</button>
 
 
 

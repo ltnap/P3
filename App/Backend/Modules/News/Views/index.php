@@ -22,24 +22,24 @@
                         { ?>
 
                             <tr>
-                            <td><?= $news['id'] ?></td>
-                            <td><?= $news['auteur'] ?></td>
-                            <td><?= $news['titre'] ?></td>
-                            <td>le <?= $news['AddDate']->format('d/m/Y à H\hi')  ?></td>
+                            <td><?= $news->id() ?></td>
+                            <td><?= $news->auteur() ?></td>
+                            <td><?= $news->titre() ?></td>
+                            <td>le <?= $news->AddDate()->format('d/m/Y à H\hi')  ?></td>
                             <td> <?php
-                                if($news['AddDate'] == $news['UpdtDate']) { echo '-';  } else { echo 'le ' .  $news['UpdtDate']->format('d/m/Y à H\hi'); } ?>
+                                if($news->AddDate() == $news->UpdtDate()) { echo '-';  } else { echo 'le ' .  $news->UpdtDate()->format('d/m/Y à H\hi'); } ?>
                             </td>
 
 
                             <td class="td-actions">
 
                                 <?php if ($this->app->user()->isAdmin()) { ?>
-                                    <a href="news-update-<?= $news['id'] ?>.html">
+                                    <a href="news-update-<?= $news->id() ?>.html">
                                         <button type="button"  title="Modifier" class="btn btn-light btn-simple btn-lg tooltip-action" rel="tooltip" data-toggle="tooltip" data-original-title="Modifier">
                                             <i class="fa fa-edit"></i>
                                         </button>
                                     </a>
-                                    <a href="news-delete-<?= $news['id'] ?>.html">
+                                    <a href="news-delete-<?= $news->id() ?>.html">
                                         <button type="button" rel="tooltip" title="Supprimer" class="btn btn-danger btn-simple btn-lg tooltip-action" rel="tooltip" data-toggle="tooltip" data-original-title="Supprimer">
                                             <i class="fa fa-times"></i>
                                         </button>

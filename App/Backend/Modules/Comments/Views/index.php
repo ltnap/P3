@@ -13,13 +13,13 @@
         <tbody>
         <?php foreach ($comments as $comment) {
 
-            echo '<tr><td>', $comment['id'], '</td><td>', $comment['auteur'],'</td><td>', $comment['content'],'</td><td>', $comment['state'],'</td><td class="td-actions">
-                <a href="\admin\comment-update-', $comment['id'], '.html">
+            echo '<tr><td>', $comment->id(), '</td><td>', $comment->auteur(),'</td><td>', $comment->content(),'</td><td>', $comment->state(),'</td><td class="td-actions">
+                <a href="\admin\comment-update-', $comment->id(), '.html">
                     <button type="button" rel="tooltip" title="Modifier" class="btn btn-light btn-simple btn-lg tooltip-action" rel="tooltip" data-toggle="tooltip" data-original-title="Modifier">
                     <i class="fa fa-edit"></i>
                     </button>
                 </a> 
-                <a href="\admin\comment-delete-', $comment['id'], '.html">            
+                <a href="\admin\comment-delete-', $comment->id(), '.html">            
                     <button type="button" rel="tooltip" title="Supprimer" class="btn btn-danger btn-simple btn-lg tooltip-action" rel="tooltip" data-toggle="tooltip" data-original-title="Supprimer">
                     <i class="fa fa-times"></i>
                     </button>
