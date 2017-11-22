@@ -28,7 +28,7 @@ class CommentsManagerPDO extends CommentsManager
     public function getAllComments()
     {
 
-        $sql = 'SELECT * FROM comments';
+        $sql = 'SELECT * FROM comments ORDER BY date DESC';
 
         $requete = $this->dao->query($sql);
         $requete->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\Comment');
