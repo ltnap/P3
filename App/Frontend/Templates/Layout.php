@@ -21,7 +21,7 @@
     <link href="css/style.css" rel="stylesheet" />
 
     <!-- Bootstrap core CSS  GRID ONLY   -->
-<!--    <link href="/css/bootstrap.css" rel="stylesheet" />-->
+    <link href="/css/bootstrap.css" rel="stylesheet" />
 
     <!-- Custom styles for this template -->
 <!--    <link href="http://getbootstrap.com/docs/4.0/examples/starter-template/starter-template.css" rel="stylesheet">-->
@@ -230,7 +230,7 @@
 
 
     <!--    SECTION 0 -- ACCUEIL -->
-    <div class="section " id="section0">
+    <div class="section container-fluid" id="section0">
         <section class="cd-intro">
             <div class="row">
             <!-- Canvas displaying the constellation effect -->
@@ -251,7 +251,7 @@
 
 
     <!--    SECTION 1 -- BIOGRAPHIE -->
-    <div class="section" id="section1">
+    <div class="section container-fluid" id="section1">
         <div class="intro profile">
             <h1>Jean <br> Forteroche</h1>
             <div class="infoHolder">
@@ -270,7 +270,7 @@
 
 
     <!--    SECTION 2 -- EPISODES -->
-    <div class="section" id="section2">
+    <div class="section container-fluid" id="section2">
 
         <!-- SLIDE 1 -->
         <div class="slide" id="slide1">
@@ -317,7 +317,7 @@
 
 
     <!--    SECTION 3 -- CONTACT -->
-    <div class="section" id="section3">
+    <div class="section container-fluid" id="section3">
         <div class="codrops-header">
             <h1>ME CONTACTER <span>Vous pouvez me contacter via le formulaire</span></h1>
         </div>

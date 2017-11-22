@@ -2810,23 +2810,24 @@ input[type=text]::-ms-clear {
         flex-direction: column;
     }
 }
+
+
+
+
+
+
+
+
 @media (min-width: 768px) and (max-width: 991px) {
-    .fp-section {
-        width: 750px;
-    }
+
 
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-    .fp-section {
-        width: 970px;
-    }
+
 }
 
 @media (min-width: 1200px) {
-    .fp-section {
-        width: 1170px;
-    }
 
 
 }
