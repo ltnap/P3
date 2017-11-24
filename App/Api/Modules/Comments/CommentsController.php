@@ -43,7 +43,7 @@ class CommentsController extends BackController
         if ($formHandler->process())
         {
             $this->app->user()->setFlash('INFO','Le commentaire a bien été ajouté', 'success');
-//            $this->app->httpResponse()->redirect('/api/get-news-' .$comment->news() .'#3rdPage/1');
+            $this->app->httpResponse()->redirect('/api/get-news-' .$comment->news() .'#3rdPage/1');
 
         }
 

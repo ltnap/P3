@@ -1113,7 +1113,7 @@ $(function() {
 });
 
 /*
- api/get-news-<?= $news['id'] ?>#3rdPage/1
+ "http://projet3.christophecorenthy.com/Views/api/get-news-<?= $news['id'] ?>#3rdPage/1
 */
 
 
